@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系 - 我的个人博客</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- 自定义CSS -->
+    <link href="style.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 56px;
+        }
+        .contact-form {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        .social-links a {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #6c757d;
+        }
+        .social-links a:hover {
+            color: #0d6efd;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">我的博客</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">关于我</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">联系</a>
+                    </li>
+                </ul>
+                <div class="ms-auto">
+                    <button class="btn btn-outline-light" onclick="toggleDarkMode()">
+                        <i class="bi bi-moon-fill"></i> 暗黑模式
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>联系我</h1>
+                <p class="lead">有任何问题或建议，欢迎随时联系我。</p>
+                
+                <div class="mt-4">
+                    <h3><i class="bi bi-envelope"></i> 电子邮件</h3>
+                    <p>example@example.com</p>
+                    
+                    <h3 class="mt-4"><i class="bi bi-geo-alt"></i> 地址</h3>
+                    <p>中国北京市海淀区</p>
+                    
+                    <h3 class="mt-4">社交媒体</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-github"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-wechat"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="contact-form">
+                    <h2>发送消息</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">姓名</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">邮箱</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">消息</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">发送</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 我的个人博客. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 自定义JS -->
+    <script src="main.js"></script>
+</body>
+</html>

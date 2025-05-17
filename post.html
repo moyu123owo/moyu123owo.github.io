@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章标题 - 我的个人博客</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- 自定义CSS -->
+    <link href="style.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 56px;
+        }
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+        .article-meta {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">我的博客</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">关于我</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">联系</a>
+                    </li>
+                </ul>
+                <div class="ms-auto">
+                    <button class="btn btn-outline-light" onclick="toggleDarkMode()">
+                        <i class="bi bi-moon-fill"></i> 暗黑模式
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <article>
+                    <h1 class="mb-3">文章标题</h1>
+                    <div class="article-meta mb-4">
+                        <span class="me-3"><i class="bi bi-calendar"></i> 2023年5月1日</span>
+                        <span><i class="bi bi-person"></i> 作者</span>
+                    </div>
+                    
+                    <div class="article-content">
+                        <p>这里是文章的开头段落...</p>
+                        
+                        <h2>章节标题</h2>
+                        <p>这里是文章内容...</p>
+                        
+                        <img src="https://via.placeholder.com/800x400" alt="文章图片" class="img-fluid">
+                        
+                        <p>更多文章内容...</p>
+                        
+                        <h3>小标题</h3>
+                        <p>这里是文章的子内容...</p>
+                    </div>
+                    
+                    <div class="mt-5 pt-4 border-top">
+                        <h4>相关文章</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">相关文章1</h5>
+                                        <p class="card-text">文章简介...</p>
+                                        <a href="#" class="btn btn-sm btn-primary">阅读更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">相关文章2</h5>
+                                        <p class="card-text">文章简介...</p>
+                                        <a href="#" class="btn btn-sm btn-primary">阅读更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 我的个人博客. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 自定义JS -->
+    <script src="main.js"></script>
+</body>
+</html>
