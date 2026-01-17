@@ -35,6 +35,12 @@ body {
   backdrop-filter: blur(10px);
 }
 
+.navbar-dark .navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
 .navbar-dark .navbar-nav .nav-link {
   color: var(--text-primary);
   font-weight: 500;
@@ -173,7 +179,8 @@ body {
   content: '';
   position: absolute;
   bottom: -10px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 60px;
   height: 4px;
   background: var(--primary-color);
@@ -185,105 +192,48 @@ body {
   background-color: white;
 }
 
-.experience-card {
-  background: var(--light-bg);
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+.about-content {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
-.timeline {
-  position: relative;
-  padding-left: 20px;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 2px;
-  background: var(--primary-color);
-}
-
-.timeline-item {
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 30px;
-}
-
-.timeline-marker {
-  position: absolute;
-  left: -26px;
-  top: 0;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--primary-color);
-  border: 3px solid white;
-  box-shadow: 0 0 0 3px var(--primary-color);
-}
-
-.timeline-content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-}
-
-/* 技能部分 */
-.skill-card {
+/* 兴趣部分 */
+.interest-card {
   border: none;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   transition: transform var(--transition-speed) ease;
+  background: white;
 }
 
-.skill-card:hover {
+.interest-card:hover {
   transform: translateY(-10px);
 }
 
-.progress {
-  height: 10px;
-  border-radius: 5px;
-  overflow: hidden;
-  background: #e9ecef;
+.icon {
+  display: inline-block;
+  padding: 15px;
+  background: rgba(67, 97, 238, 0.1);
+  border-radius: 50%;
 }
 
-.progress-bar {
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-  transition: width 1s ease;
+/* 链接部分 */
+.links-container {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.skill-info {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
-  font-weight: 500;
-}
-
-/* 项目展示部分 */
-.project-card {
-  border: none;
-  border-radius: 10px;
-  overflow: hidden;
+.links-container .btn {
+  border-radius: 12px;
   transition: all var(--transition-speed) ease;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  border: 2px solid transparent;
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
-
-.project-card img {
-  height: 200px;
-  object-fit: cover;
-}
-
-.tags {
-  margin-top: 15px;
+.links-container .btn:hover {
+  transform: scale(1.03);
+  border-color: var(--primary-color);
 }
 
 /* 联系部分 */
@@ -301,6 +251,27 @@ body {
   border-color: var(--primary-color);
   box-shadow: 0 0 0 0.25rem rgba(67, 97, 238, 0.25);
   outline: 0;
+}
+
+/* 按钮样式调整 */
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-danger {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  border-color: #dc3545;
 }
 
 /* 页脚 */
@@ -331,6 +302,10 @@ footer {
   .scroll-down {
     display: none;
   }
+  
+  .links-container .btn {
+    padding: 1rem !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -341,11 +316,6 @@ footer {
   .hero-section {
     height: auto;
     padding: 100px 0;
-  }
-  
-  .social-links {
-    display: flex;
-    justify-content: center;
   }
 }
 
@@ -358,6 +328,10 @@ body.dark-mode {
 body.dark-mode .navbar {
   background-color: rgba(18, 18, 18, 0.95) !important;
   color: white;
+}
+
+body.dark-mode .navbar-dark .navbar-brand {
+  color: var(--accent-color);
 }
 
 body.dark-mode .navbar-dark .navbar-nav .nav-link {
@@ -376,22 +350,16 @@ body.dark-mode #about {
   background-color: #1e1e1e;
 }
 
-body.dark-mode .experience-card {
+body.dark-mode .interest-card {
   background: #2d2d2d;
   color: #e0e0e0;
 }
 
-body.dark-mode .timeline-content {
-  background: #2d2d2d;
+body.dark-mode .about-content {
   color: #e0e0e0;
 }
 
-body.dark-mode .skill-card {
-  background: #2d2d2d;
-  color: #e0e0e0;
-}
-
-body.dark-mode .project-card {
+body.dark-mode .links-container .btn {
   background: #2d2d2d;
   color: #e0e0e0;
 }

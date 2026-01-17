@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // 滚动动画效果
   const animateOnScroll = function() {
-    const elements = document.querySelectorAll('.skill-card, .project-card, .timeline-item');
+    const elements = document.querySelectorAll('.interest-card');
     
     elements.forEach(element => {
       const elementPosition = element.getBoundingClientRect().top;
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   // 初始设置元素动画样式
-  document.querySelectorAll('.skill-card, .project-card, .timeline-item').forEach(el => {
+  document.querySelectorAll('.interest-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
@@ -72,15 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
       contactForm.reset();
     });
   }
-
-  // 项目卡片点击处理
-  document.querySelectorAll('.project-card .btn').forEach(button => {
-    button.addEventListener('click', function(e) {
-      e.preventDefault();
-      const projectName = this.closest('.project-card').querySelector('.card-title').textContent;
-      alert(`${projectName} 项目详情页面即将推出，敬请期待！`);
-    });
-  });
 });
 
 // 简单的暗黑模式切换
@@ -99,8 +90,7 @@ function toggleDarkMode() {
   }
 }
 
-// 检查用户之前的暗黑模式偏好
-document.addEventListener('DOMContentLoaded', function() {
+  // 检查用户之前的暗黑模式偏好
   if (localStorage.getItem('darkMode') === 'true') {
     document.body.classList.add('dark-mode');
     const darkModeBtn = document.querySelector('[onclick="toggleDarkMode()"]');
