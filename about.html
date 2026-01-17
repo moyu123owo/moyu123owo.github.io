@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我 - 我的个人博客</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- 自定义CSS -->
+    <link href="style.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 56px;
+        }
+        .skill-badge {
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">我的博客</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">关于我</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">联系</a>
+                    </li>
+                </ul>
+                <div class="ms-auto">
+                    <button class="btn btn-outline-light" onclick="toggleDarkMode()">
+                        <i class="bi bi-moon-fill"></i> 暗黑模式
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <div class="container mt-5">
+        <div class="row mb-5 profile-section">
+            <div class="col-md-4 text-center">
+                <img src="https://via.placeholder.com/150" alt="个人头像" class="profile-img mb-3">
+                <h2>我的名字</h2>
+                <p class="text-muted">前端开发者 & 博主</p>
+            </div>
+            <div class="col-md-8">
+                <h1>关于我</h1>
+                <p class="lead">这是我的个人简介。</p>
+                
+                <h3 class="mt-4">个人简介</h3>
+                <p>我是一名热爱技术的开发者，专注于Web前端开发。喜欢分享知识和经验，希望通过这个博客记录我的学习和成长历程。</p>
+                
+                <h3 class="mt-4">技能</h3>
+                <div>
+                    <span class="badge bg-primary skill-badge">HTML/CSS</span>
+                    <span class="badge bg-primary skill-badge">JavaScript</span>
+                    <span class="badge bg-primary skill-badge">React</span>
+                    <span class="badge bg-primary skill-badge">Vue</span>
+                    <span class="badge bg-primary skill-badge">Node.js</span>
+                </div>
+                
+                <h3 class="mt-4">教育背景</h3>
+                <ul>
+                    <li>XX大学 - 计算机科学与技术 (2015-2019)</li>
+                    <li>XX培训机构 - 前端开发高级课程 (2020)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 我的个人博客. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 自定义JS -->
+    <script src="main.js"></script>
+</body>
+</html>
